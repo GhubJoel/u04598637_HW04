@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "RegisterOptions";
+}
+
+<h2>Register Options</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Are you joining as a Paramedic?</h2>
+        <p><button>@Html.ActionLink("Paramedic Registration", "ParaReg", "Paramedic") </button></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Are you joining as a In-Field Doctor?</h2>
+        <p><button>@Html.ActionLink("In-Field Doctor Registration", "RegisterOptions", "Home") </button></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Are you joining as a Volunteer?</h2>
+        <p><button>@Html.ActionLink("Volunteer Registration", "RegisterOptions", "Home") </button></p>
+    </div>
+</div>
+

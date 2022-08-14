@@ -121,10 +121,20 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InfieldDoctorController.cs" />
+    <Compile Include="Controllers\ParamedicController.cs" />
+    <Compile Include="Controllers\PatientController.cs" />
+    <Compile Include="Controllers\VolunteerController.cs" />
+    <Compile Include="Controllers\WorkerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\InfieldDoctor.cs" />
+    <Compile Include="ViewModels\Paramedic.cs" />
+    <Compile Include="ViewModels\Patient.cs" />
+    <Compile Include="ViewModels\Volunteer.cs" />
+    <Compile Include="ViewModels\Worker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -162,9 +172,17 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\InfieldDoctor\DocIndex.cshtml" />
+    <Content Include="Views\Paramedic\ParaIndex.cshtml" />
+    <Content Include="Views\Patient\PatIndex.cshtml" />
+    <Content Include="Views\Volunteer\VolIndex.cshtml" />
+    <Content Include="Views\Worker\WorkIndex.cshtml" />
+    <Content Include="Views\Home\RegisterOptions.cshtml" />
+    <Content Include="Views\Paramedic\ParaReg.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Media\Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

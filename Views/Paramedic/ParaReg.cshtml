@@ -1,0 +1,64 @@
+﻿@model u04598637_HW04.ViewModels.Paramedic
+@{
+    ViewBag.Title = "ParaReg";
+}
+
+<h2>Paramedic Registration</h2>
+
+<div class="col-7">
+    @using (Html.BeginForm("ParaReg", "Paramedic", FormMethod.Post))
+    {
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                <h3>Upload Clear Image of yourself</h3>
+                <input type="file" name="file" />
+                <br />
+                <input type="submit" value="Upload" />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                @Html.LabelFor(zz => zz.ID)
+                @Html.EditorFor(zz => zz.ID, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <div class="form-group col-md-5">
+                @Html.LabelFor(zz => zz.Age)
+                @Html.EditorFor(zz => zz.Age, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                @Html.LabelFor(zz => zz.FirstName)
+                @Html.EditorFor(zz => zz.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="form-group col-md-5">
+                @Html.LabelFor(zz => zz.LastName)
+                @Html.EditorFor(zz => zz.LastName, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                @Html.LabelFor(zz => zz.Profession)
+                @Html.EditorFor(zz => zz.Profession, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="form-group col-md-5">
+                @Html.LabelFor(zz => zz.AmbulanceNr)
+                @Html.EditorFor(zz => zz.AmbulanceNr, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+       
+        <br>
+        <br>
+
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                <input class="btn btn-primary" type="submit" />
+                <a class="btn btn-secondary" href="@Url.Action("Index", "Home")">Cancel</a>
+            </div>
+        </div>
+    }
+

@@ -26,5 +26,10 @@ namespace u04598637_HW04.Controllers
 
             return View();
         }
+
+        public ActionResult RegisterOptions()
+        {
+            return View();
+        }
     }
 }
