@@ -6,12 +6,24 @@ using System.Web.Mvc;
 
 namespace u04598637_HW04.ViewModels
 {
-    public class InfieldDoctor : Controller
+    public class InfieldDoctor : Worker
     {
-        // GET: InfieldDoctor
-        public ActionResult Index()
+        private string _hospital;
+
+        public InfieldDoctor(string ID, string hospital, string firstName, string lastName, int age, string gender, string profession) : base(ID, firstName, lastName, age, gender, profession)
         {
-            return View();
+            _hospital = hospital;
+        }
+
+        public string Hospital
+        {
+            get { return _hospital; }
+            set { _hospital = value; }
+        }
+
+        public override string DispInfo()
+        {
+            return base.DispInfo() + "Working with us from " + Hospital;
         }
     }
 }

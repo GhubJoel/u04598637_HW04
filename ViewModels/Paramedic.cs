@@ -11,7 +11,7 @@ namespace u04598637_HW04.ViewModels
         // GET: Paramedic
         private int _AmbNr;
 
-        public Paramedic(int ID, int ambnr, string firstName, string lastName, int age, string profession) : base(ID, firstName, lastName, age,profession)
+        public Paramedic(string ID, int ambnr, string firstName, string lastName, int age, string gender, string profession) : base(ID, firstName, lastName, age, gender,profession)
         {
             _AmbNr = ambnr;
         }

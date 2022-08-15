@@ -179,6 +179,8 @@
     <Content Include="Views\Worker\WorkIndex.cshtml" />
     <Content Include="Views\Home\RegisterOptions.cshtml" />
     <Content Include="Views\Paramedic\ParaReg.cshtml" />
+    <Content Include="Views\InfieldDoctor\DocReg.cshtml" />
+    <Content Include="Views\Volunteer\VolReg.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,7 +1,30 @@
-﻿
+﻿@model List<u04598637_HW04.ViewModels.Paramedic>
 @{
-    ViewBag.Title = "ParaIndex";
+    ViewBag.Title = "Paramedics";
 }
 
-<h2>ParaIndex</h2>
+<h2>Our Paramedics</h2>
+<table style="width:100%;">
+    <tr>
+        <th>ID</th>
+        <th>Ambulance Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Profession</th>
+    </tr>
+    @foreach (var paramedic in Model)
+    {
+        <tr>
+            <td>@paramedic.ID</td>
+            <td>@paramedic.AmbulanceNr</td>
+            <td>@paramedic.FirstName</td>
+            <td>@paramedic.LastName</td>
+            <td>@paramedic.Age</td>
+            <td>@paramedic.Gender</td>
+            <td>@paramedic.Profession</td>
+        </tr>
+    }
+</table>
 

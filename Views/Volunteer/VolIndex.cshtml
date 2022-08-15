@@ -1,7 +1,30 @@
-﻿
+﻿@model List<u04598637_HW04.ViewModels.Volunteer>
 @{
     ViewBag.Title = "VolIndex";
 }
 
-<h2>VolIndex</h2>
 
+<h2>Our Volunteers</h2>
+<table style="width:100%;">
+    <tr>
+        <th>ID</th>
+        <th>Help Center</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Profession</th>
+    </tr>
+    @foreach (var volunteers in Model)
+    {
+        <tr>
+            <td>@volunteers.ID</td>
+            <td>@volunteers.HelpCenter</td>
+            <td>@volunteers.FirstName</td>
+            <td>@volunteers.LastName</td>
+            <td>@volunteers.Age</td>
+            <td>@volunteers.Gender</td>
+            <td>@volunteers.Profession</td>
+        </tr>
+    }
+</table>

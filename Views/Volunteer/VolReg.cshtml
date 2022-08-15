@@ -1,12 +1,12 @@
-﻿@model u04598637_HW04.ViewModels.Paramedic
+﻿@model u04598637_HW04.ViewModels.Volunteer
 @{
-    ViewBag.Title = "ParaReg";
+    ViewBag.Title = "VolReg";
 }
 
-<h2>Paramedic Registration</h2>
+<h2>In-Field Doctor Registration</h2>
 
 <div class="col-7">
-    @using (Html.BeginForm("ParaReg", "Paramedic", FormMethod.Post))
+    @using (Html.BeginForm("VolReg", "Volunteer", FormMethod.Post))
     {
         <div class="form-row">
             <div class="form-group col-md-5">
@@ -50,8 +50,8 @@
                 @Html.EditorFor(zz => zz.Gender, new { htmlAttributes = new { @class = "form-control" } })
             </div>
             <div class="form-group col-md-5">
-                @Html.LabelFor(zz => zz.AmbulanceNr)
-                @Html.EditorFor(zz => zz.AmbulanceNr, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.LabelFor(zz => zz.HelpCenter)
+                @Html.EditorFor(zz => zz.HelpCenter, new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
 
@@ -64,6 +64,7 @@
                 <a class="btn btn-secondary" href="@Url.Action("Index", "Home")">Cancel</a>
             </div>
         </div>
+
     }
 
 </div>

@@ -8,24 +8,26 @@ namespace u04598637_HW04.ViewModels
 {
     public abstract class Worker 
     {
-        private int _ID;
+        private string _ID;
         private string _FirstName;
         private string _LastName;
         private int _Age;
+        private string _Gender;
         private string _Profession;
        // private string _Image;
 
-        public Worker(int ID, string firstName, string lastName, int age, string profession)
+        public Worker(string ID, string firstName, string lastName, int age, string gender, string profession)
         {
             _ID = ID;
             _FirstName = firstName;
             _LastName = lastName;
             _Age = age;
+            _Gender = gender;
             _Profession = profession;
            // _Image = image;
         }
 
-        public int ID
+        public string ID
         {
             get { return _ID; }
             set { _ID = value; }
@@ -45,6 +47,11 @@ namespace u04598637_HW04.ViewModels
         {
             get { return _Age; }
             set { _Age = value; }
+        }
+        public string Gender
+        {
+            get { return _Gender; }
+            set { _Gender = value; }
         }
         public string Profession
         {
