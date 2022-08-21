@@ -24,7 +24,7 @@ namespace u04598637_HW04.ViewModels
 
         public override string DispInfo()
         {
-            return base.DispInfo() + "Ambulance Number : " + AmbulanceNr;
+            return base.DispInfo() + " " + " With Ambulance Number : " + AmbulanceNr;
         }
 
 

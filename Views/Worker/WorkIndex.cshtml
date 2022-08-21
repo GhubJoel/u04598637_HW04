@@ -1,7 +1,66 @@
-﻿
+﻿@using u04598637_HW04.ViewModels
+@model List<Worker>
 @{
-    ViewBag.Title = "WorkIndex";
+    ViewBag.Title = "Workers";
 }
 
-<h2>Workers</h2>
+<h2>Our ICRC Hope Center Members</h2>
+<table style="width:100%;">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Type</th>
+        <th>Unique Attribute</th>
+        <th>Info</th>
+    </tr>
+    @foreach (var worker in Model)
+    {
+        <tr>
+            <td>@worker.ID</td>
+            <td>@worker.FirstName</td>
+            <td>@worker.LastName</td>
+            <td>@worker.Age</td>
+            <td>@worker.Gender</td>
+            <td>
+                @{
+                    if (worker.GetType() == typeof(Paramedic))
+                    {
+                        @: Paramedic
+                    }
+                    else if (worker.GetType() == typeof(InfieldDoctor))
+                    {
+                        @: In-Field Doctor
+                    }
+                    else
+                    {
+                        @: Volunteer
+                    }
+                  }
+           </td>
+            <td>
+                @{
+                    if (worker.GetType() == typeof(Paramedic))
+                    {
+                        Paramedic mypara = (Paramedic)worker;
+                        <span>Ambulance Nr : @mypara.AmbulanceNr</span>
+                    }
+                    else if (worker.GetType() == typeof(InfieldDoctor))
+                    {
+                        InfieldDoctor mydoc = (InfieldDoctor)worker;
+                        <span>Hospital : @mydoc.Hospital</span>
+                    }
+                    else
+                    {
+                        Volunteer myvol = (Volunteer)worker;
+                        <span>Help Center : @myvol.HelpCenter</span>
+                    }
+                }
+            </td>
+            <td>@worker.DispInfo()</td>
+        </tr>
+    }
+</table>
 

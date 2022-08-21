@@ -68,7 +68,7 @@ namespace u04598637_HW04.ViewModels
         */
         public virtual string DispInfo()
         {
-            return FirstName + LastName + " is " + Age.ToString() + " years old." + " and a " + Profession + "for ICRC Hope Center";
+            return FirstName + " " + LastName + " is " + Age.ToString() + " years old." + " and a " + " " + Profession + " " + "for ICRC Hope Center";
         }
 
     }

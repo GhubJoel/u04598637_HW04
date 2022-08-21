@@ -23,7 +23,7 @@ namespace u04598637_HW04.ViewModels
 
         public override string DispInfo()
         {
-            return base.DispInfo() + "Working with us from " + Hospital;
+            return base.DispInfo() + " " + "Working with us from : " + Hospital;
         }
     }
 }
