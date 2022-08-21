@@ -71,5 +71,7 @@ namespace u04598637_HW04.ViewModels
             return FirstName + " " + LastName + " is " + Age.ToString() + " years old." + " and a " + " " + Profession + " " + "for ICRC Hope Center";
         }
 
+        public abstract string Duty();
+
     }
 }

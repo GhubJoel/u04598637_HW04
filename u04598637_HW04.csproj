@@ -133,6 +133,7 @@
     <Compile Include="ViewModels\InfieldDoctor.cs" />
     <Compile Include="ViewModels\Paramedic.cs" />
     <Compile Include="ViewModels\Patient.cs" />
+    <Compile Include="ViewModels\PatientList.cs" />
     <Compile Include="ViewModels\Volunteer.cs" />
     <Compile Include="ViewModels\Worker.cs" />
   </ItemGroup>
@@ -181,6 +182,9 @@
     <Content Include="Views\Paramedic\ParaReg.cshtml" />
     <Content Include="Views\InfieldDoctor\DocReg.cshtml" />
     <Content Include="Views\Volunteer\VolReg.cshtml" />
+    <Content Include="Views\Patient\PatDisplay.cshtml" />
+    <Content Include="Views\Patient\AddPatient.cshtml" />
+    <Content Include="Views\Patient\UpdatePatient.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

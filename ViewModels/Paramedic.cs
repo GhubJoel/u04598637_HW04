@@ -27,6 +27,11 @@ namespace u04598637_HW04.ViewModels
             return base.DispInfo() + " " + " With Ambulance Number : " + AmbulanceNr;
         }
 
+        public override string Duty()
+        {
+            return "Treat as many people as possible";
+        }
+
 
     }
 }

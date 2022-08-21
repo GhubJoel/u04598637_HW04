@@ -1,7 +1,41 @@
-﻿
+﻿@model List<u04598637_HW04.ViewModels.Patient>
 @{
     ViewBag.Title = "PatIndex";
 }
 
 <h2>Patients</h2>
 
+<div class="container">
+    <a class="btn btn-success" href="@Url.Action("AddPatient", "Patient")">Add</a>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Status</th>
+            <th>Location</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pat in Model)
+        {
+        <tr>
+            <td>@pat.FirstName</td>
+            <td>@pat.LastName</td>
+            <td>@pat.Age</td>
+            <td>@pat.Gender</td>
+            <td>@pat.Status</td>
+            <td>@pat.Location</td>
+            <td>
+                <a class="btn btn-warning" href="@Url.Action("UpdatePatient", "Patient", new { id = pat.ID })">Update</a>
+                <a class="btn btn-danger" href="@Url.Action("DeletePatient", "Patient", new { id = pat.ID })">Remove</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

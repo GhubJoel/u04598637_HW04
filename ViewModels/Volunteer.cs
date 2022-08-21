@@ -25,5 +25,10 @@ namespace u04598637_HW04.ViewModels
         {
             return base.DispInfo() + " " + "Working with us from : " + HelpCenter;
         }
+
+        public override string Duty()
+        {
+            return "Identify as many people as possible";
+        }
     }
 }

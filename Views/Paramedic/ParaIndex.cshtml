@@ -13,6 +13,7 @@
         <th>Age</th>
         <th>Gender</th>
         <th>Profession</th>
+        <th>Duty</th>
     </tr>
     @foreach (var paramedic in Model)
     {
@@ -24,6 +25,7 @@
             <td>@paramedic.Age</td>
             <td>@paramedic.Gender</td>
             <td>@paramedic.Profession</td>
+            <td>@paramedic.Duty();</td>
         </tr>
     }
 </table>

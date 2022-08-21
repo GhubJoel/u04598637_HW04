@@ -25,5 +25,10 @@ namespace u04598637_HW04.ViewModels
         {
             return base.DispInfo() + " " + "Working with us from : " + Hospital;
         }
+
+        public override string Duty()
+        {
+            return "Save as many lives as possible";
+        }
     }
 }
